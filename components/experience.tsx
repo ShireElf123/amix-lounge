@@ -34,7 +34,7 @@ export const Experience = ({ go }: ExperienceProps) => (
           rev: false,
         },
         {
-          img: IMG.bar,
+          img: IMG.barReal,
           img2: IMG.lounge,
           title: "The Bar & Lounge",
           sub: "Drinks That Hit Different",

@@ -18,46 +18,57 @@ export const G = {
   borderHover:   "rgba(200,169,81,0.35)",
 }
 
+const Q = "auto=format&fit=crop&q=85"
+
 // ═══════════════════════════════════════════════
-// IMAGES — ALL REAL CLIENT CLOUDINARY ASSETS
+// IMAGES
 // ═══════════════════════════════════════════════
 export const IMG = {
   // ── BRAND ──
   logo:    "https://res.cloudinary.com/dfuibw321/image/upload/v1778888492/file_00000000b930722fb01c9821c42f3094_pecxib.png",
   hero:    "https://res.cloudinary.com/dfuibw321/image/upload/v1778888304/Untitled_design_12_rr1v6x.png",
 
-  // ── VENUE & ATMOSPHERE ──
+  // ── FOOD — original kota kept, new real client food photos added ──
+  kota:    "https://res.cloudinary.com/dfuibw321/image/upload/v1778888257/air-fryer-kota_gonih1.webp",
+  kota2:   "https://res.cloudinary.com/dfuibw321/image/upload/v1780509225/kota_2_fewncb.jpg",
+  burger1: "https://res.cloudinary.com/dfuibw321/image/upload/v1780509301/ham_burger_n_chips_erlddv.jpg",
+  burger2: "https://res.cloudinary.com/dfuibw321/image/upload/v1780509225/ham_burger_n_chips_vcbzow.jpg",
+  wors:    "https://res.cloudinary.com/dfuibw321/image/upload/v1780509227/wors_short_rib_and_pap_shemiu.jpg",
+  wings:   "https://res.cloudinary.com/dfuibw321/image/upload/v1780509226/wings_n_chipsfries_www3h5.jpg",
+  chicken1:"https://res.cloudinary.com/dfuibw321/image/upload/v1780509226/full_chicken_and_chips_qdeh1t.jpg",
+  chicken2:"https://res.cloudinary.com/dfuibw321/image/upload/v1780509225/full_chicken_and_chips_2_oueesd.jpg",
+  mystery: "https://res.cloudinary.com/dfuibw321/image/upload/v1780509223/2b931dca-fbf5-46c9-bdac-f7e141d205a0_jte5ud.jpg",
+
+  // ── VENUE — original Unsplash kept for atmosphere, real client photos added ──
   crowd:   "https://res.cloudinary.com/dfuibw321/image/upload/v1780511654/cinematic_lounge_scene_with_blurred_peaople_in_the_back_rryjrh.png",
+  live:    "https://res.cloudinary.com/dfuibw321/image/upload/v1780509244/Live_Entertainment_j4zufe.jpg",
+  dj:      "https://res.cloudinary.com/dfuibw321/image/upload/v1780511189/celleb_on_dj_decks_luqew0.png",
+  djeddie: "https://res.cloudinary.com/dfuibw321/image/upload/v1780511673/dj_eddie-e_host_ikxdwo.png",
+  celeb:   "https://res.cloudinary.com/dfuibw321/image/upload/v1780511179/celleb_performing_1_nnr3ez.png",
+  bar:     `https://images.unsplash.com/photo-1470337458703-46ad1756a187?${Q}&w=1200`,
+  barReal: "https://res.cloudinary.com/dfuibw321/image/upload/v1780511186/bar_k8iw1c.png",
+  vip:     `https://images.unsplash.com/photo-1414235077428-338989a2e8c0?${Q}&w=1200`,
+  lounge:  `https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?${Q}&w=1200`,
   ladies1: "https://res.cloudinary.com/dfuibw321/image/upload/v1780511654/ladies_a0sxsh.png",
   ladies2: "https://res.cloudinary.com/dfuibw321/image/upload/v1780511633/ladies_2_ukmy0d.png",
-  djeddie: "https://res.cloudinary.com/dfuibw321/image/upload/v1780511673/dj_eddie-e_host_ikxdwo.png",
-  dj:      "https://res.cloudinary.com/dfuibw321/image/upload/v1780511189/celleb_on_dj_decks_luqew0.png",
-  bar:     "https://res.cloudinary.com/dfuibw321/image/upload/v1780511186/bar_k8iw1c.png",
-  celeb:   "https://res.cloudinary.com/dfuibw321/image/upload/v1780511179/celleb_performing_1_nnr3ez.png",
-  live:    "https://res.cloudinary.com/dfuibw321/image/upload/v1780509244/Live_Entertainment_j4zufe.jpg",
-  lounge:  "https://res.cloudinary.com/dfuibw321/image/upload/v1780511654/cinematic_lounge_scene_with_blurred_peaople_in_the_back_rryjrh.png",
-  vip:     "https://res.cloudinary.com/dfuibw321/image/upload/v1780511186/bar_k8iw1c.png",
 
-  // ── FOOD — ALL REAL CLIENT PHOTOS ──
-  kota:        "https://res.cloudinary.com/dfuibw321/image/upload/v1780509225/kota_2_fewncb.jpg",
-  burger1:     "https://res.cloudinary.com/dfuibw321/image/upload/v1780509301/ham_burger_n_chips_erlddv.jpg",
-  burger2:     "https://res.cloudinary.com/dfuibw321/image/upload/v1780509225/ham_burger_n_chips_vcbzow.jpg",
-  wors:        "https://res.cloudinary.com/dfuibw321/image/upload/v1780509227/wors_short_rib_and_pap_shemiu.jpg",
-  wings:       "https://res.cloudinary.com/dfuibw321/image/upload/v1780509226/wings_n_chipsfries_www3h5.jpg",
-  chicken1:    "https://res.cloudinary.com/dfuibw321/image/upload/v1780509226/full_chicken_and_chips_qdeh1t.jpg",
-  chicken2:    "https://res.cloudinary.com/dfuibw321/image/upload/v1780509225/full_chicken_and_chips_2_oueesd.jpg",
-  mystery:     "https://res.cloudinary.com/dfuibw321/image/upload/v1780509223/2b931dca-fbf5-46c9-bdac-f7e141d205a0_jte5ud.jpg",
+  // ── DRINKS — proper cocktail/beer Unsplash, NOT the bar venue photo ──
+  cocktail:`https://images.unsplash.com/photo-1551024709-8f23befc6f87?${Q}&w=800`,
+  beer:    `https://images.unsplash.com/photo-1608270586620-248524c67de9?${Q}&w=800`,
 
-  fallback:    "https://res.cloudinary.com/dfuibw321/image/upload/v1780509225/kota_2_fewncb.jpg",
+  // ── SIDES ──
+  fries:   `https://images.unsplash.com/photo-1573080496219-bb080dd4f877?${Q}&w=800`,
+
+  fallback:`https://images.unsplash.com/photo-1504674900247-0877df9cc836?${Q}&w=800`,
 }
 
-// WhatsApp number for orders
-export const WA_NUMBER = "27000000000" // ← replace with real number
+// WhatsApp
+export const WA_NUMBER = "27000000000"
 export const waLink = (item: string, price: number) =>
   `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Amix Lounge! I'd like to order: ${item} (R${price}). Please confirm availability.`)}`
 
 // ═══════════════════════════════════════════════
-// SHOP / MENU DATA — REAL FOOD PHOTOS MAPPED
+// SHOP ITEMS — each item gets its own distinct image
 // ═══════════════════════════════════════════════
 export interface ShopItem {
   id: string
@@ -72,30 +83,30 @@ export interface ShopItem {
 }
 
 export const SHOP_ITEMS: ShopItem[] = [
-  // ── KOTA BAR ──
+  // ── KOTA BAR — kota & kota2 alternate so no duplicates ──
   { id:"kota-r25", category:"Kota Bar", badge:null, name:"Starter Kota", price:25,
     desc:"The classic. Achar, chips, polony & viana in a fresh quarter loaf.",
     img:IMG.kota, tags:["Achar","Chips","Polony","Viana"] },
   { id:"kota-r30", category:"Kota Bar", badge:null, name:"Cheesy Kota", price:30,
     desc:"Everything in the Starter, with a generous layer of melted cheese.",
-    img:IMG.kota, tags:["Achar","Chips","Polony","Viana","Cheese"] },
+    img:IMG.kota2, tags:["Achar","Chips","Polony","Viana","Cheese"] },
   { id:"kota-r35", category:"Kota Bar", badge:null, name:"Egg & Cheese Kota", price:35,
     desc:"Achar, chips and polony stacked with egg and cheese.",
     img:IMG.kota, tags:["Achar","Chips","Polony","Egg","Cheese"] },
   { id:"kota-r40", category:"Kota Bar", badge:"Popular", name:"Half Russian Kota", price:40,
     desc:"Chips, polony, half Russian sausage, cheese and egg. The upgrade.",
-    img:IMG.kota, tags:["Achar","Chips","Polony","½ Russian","Cheese","Egg"] },
+    img:IMG.kota2, tags:["Achar","Chips","Polony","½ Russian","Cheese","Egg"] },
   { id:"kota-r45", category:"Kota Bar", badge:null, name:"Viana Stack", price:45,
     desc:"The full combo — viana, cheese and egg together at last.",
     img:IMG.kota, tags:["Achar","Chips","Polony","Viana","Cheese","Egg"] },
   { id:"kota-r50", category:"Kota Bar", badge:"🔥 Hot Pick", name:"Full Russian Kota", price:50,
     desc:"Viana, egg, full Russian sausage and cheese. No compromises.",
-    img:IMG.kota, tags:["Achar","Chips","Polony","Viana","Egg","Full Russian","Cheese"] },
+    img:IMG.kota2, tags:["Achar","Chips","Polony","Viana","Egg","Full Russian","Cheese"] },
   { id:"kota-r65", category:"Kota Bar", badge:"👑 Boss", name:"The Boss Kota", price:65,
     desc:"Loaded to the absolute limit. Viana, egg, Full Russian, pattie and cheese. This is it.",
     img:IMG.kota, tags:["Achar","Chips","Polony","Viana","Egg","Full Russian","Pattie","Cheese"], featured:true },
 
-  // ── GRILLS & MAINS ──
+  // ── GRILLS & MAINS — each has its own unique photo ──
   { id:"burger-1", category:"Grills & Mains", badge:"⭐ Must Try", name:"Burger & Chips", price:85,
     desc:"Juicy beef patty, fresh build, served with a generous portion of golden slap chips.",
     img:IMG.burger1, tags:["Beef","Chips","Fresh"], featured:true },
@@ -116,17 +127,23 @@ export const SHOP_ITEMS: ShopItem[] = [
   { id:"wings-chips", category:"Wings & Sides", badge:"🔥 Hot Pick", name:"Wings & Chips", price:75,
     desc:"Crispy, saucy wings with golden slap chips. The ultimate lounge snack.",
     img:IMG.wings, tags:["Wings","Chips","Crispy"], featured:true },
+  { id:"sides-fries-m", category:"Wings & Sides", badge:null, name:"Medium Chips", price:25,
+    desc:"Golden, crispy slap chips. Medium portion.",
+    img:IMG.fries, tags:["Medium","Crispy"] },
+  { id:"sides-fries-l", category:"Wings & Sides", badge:"Best Value", name:"Large Chips", price:45,
+    desc:"The big one. Loaded large portion of our signature slap chips.",
+    img:IMG.fries, tags:["Large","Crispy"] },
   { id:"mystery-plate", category:"Wings & Sides", badge:"Chef's Special", name:"Chef's Plate", price:95,
-    desc:"The kitchen's daily special. Ask your server what's on tonight — it's always worth it.",
+    desc:"The kitchen's daily special. Ask your server what's on tonight.",
     img:IMG.mystery, tags:["Special","Daily","Chef"] },
 
-  // ── DRINKS ──
+  // ── DRINKS — proper drink images, NOT venue bar photo ──
   { id:"drinks-cocktail", category:"Drinks", badge:null, name:"Signature Cocktail", price:85,
     desc:"Ask the bar for today's special. Crafted fresh, served ice cold.",
-    img:IMG.bar, tags:["Cocktail","Signature"] },
+    img:IMG.cocktail, tags:["Cocktail","Signature"] },
   { id:"drinks-beer", category:"Drinks", badge:"Bestseller", name:"Ice Cold Beer", price:35,
     desc:"Ice cold draught. The perfect companion for any Kota.",
-    img:IMG.bar, tags:["Beer","Draught"] },
+    img:IMG.beer, tags:["Beer","Draught"] },
 
   // ── PLATTERS ──
   { id:"platter-ballers", category:"Platters", badge:"⭐ Fan Favourite", name:"Ballers Platter", price:250,
@@ -152,7 +169,7 @@ export interface Package {
 }
 
 export const PACKAGES: Package[] = [
-  { id:"pkg-standard", name:"Social Table", tier:"Standard", price:500, img:IMG.bar,
+  { id:"pkg-standard", name:"Social Table", tier:"Standard", price:500, img:IMG.barReal,
     perks:["Table for up to 6","Welcome round","Full menu access","Reserved spot"] },
   { id:"pkg-vip", name:"VIP Booth", tier:"VIP", price:1500, img:IMG.lounge,
     perks:["Premium booth","Bottle service","Dedicated waiter","Priority entry"] },
@@ -161,7 +178,7 @@ export const PACKAGES: Package[] = [
 ]
 
 // ═══════════════════════════════════════════════
-// KOTA MENU DATA
+// KOTA MENU
 // ═══════════════════════════════════════════════
 export const KOTAS = [
   { price:"R25", items:["Achar","Chips","Polony","Viana"] },
