@@ -42,8 +42,8 @@ export const Experience = ({ go }: ExperienceProps) => (
           rev: true,
         },
         {
-          img: IMG.ladies1,
-          img2: IMG.ladies2,
+          img: IMG.crowd,
+          img2: IMG.ladies1,
           title: "VIP Section",
           sub: "The Exclusive Life",
           body: "Clean, spacious, and attended by our most professional staff. Bottle service, reserved booths, and an experience that makes every guest feel like royalty. Pre-book early — these go fast.",
@@ -107,26 +107,26 @@ export const Experience = ({ go }: ExperienceProps) => (
         </div>
       ))}
 
-      {/* ── Photo grid — all real client images ── */}
+      {/* ── Photo grid ── */}
       <Reveal>
         <div className="mt-8 mb-20">
-          <Label>Gallery</Label>
+          <Label>Captured Moments</Label>
           <h2 className="font-serif text-white text-4xl tracking-tighter mb-10">
-            The <span className="italic" style={{ color: G.gold }}>Vibe</span>
+            Nights at <span className="italic" style={{ color: G.gold }}>Amix</span>
           </h2>
         </div>
       </Reveal>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {[
-          { img: IMG.live,    label: "Live Night" },
-          { img: IMG.djeddie, label: "DJ Eddie-E" },
-          { img: IMG.celeb,   label: "Performing" },
-          { img: IMG.bar,     label: "The Bar"    },
-          { img: IMG.ladies1, label: "The Crowd"  },
-          { img: IMG.ladies2, label: "VIP Vibes"  },
-          { img: IMG.dj,      label: "On Decks"   },
-          { img: IMG.crowd,   label: "The Scene"  },
+          { img: IMG.live,    label: "Live Night"  },
+          { img: IMG.djeddie, label: "DJ Eddie-E"  },
+          { img: IMG.celeb,   label: "Performing"  },
+          { img: IMG.barReal, label: "The Bar"     },
+          { img: IMG.ladies2, label: "VIP Crowd"   },
+          { img: IMG.crowd,   label: "The Scene"   },
+          { img: IMG.dj,      label: "On Decks"    },
+          { img: IMG.ladies1, label: "The Energy"  },
         ].map((p, i) => (
           <Reveal key={i} delay={i * 0.05}>
             <motion.div
