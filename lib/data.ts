@@ -38,6 +38,8 @@ export const IMG = {
   chicken1:"https://res.cloudinary.com/dfuibw321/image/upload/v1780509226/full_chicken_and_chips_qdeh1t.jpg",
   chicken2:"https://res.cloudinary.com/dfuibw321/image/upload/v1780509225/full_chicken_and_chips_2_oueesd.jpg",
   mystery: "https://res.cloudinary.com/dfuibw321/image/upload/v1780509223/2b931dca-fbf5-46c9-bdac-f7e141d205a0_jte5ud.jpg",
+  platter: "/food/platter.jpg",
+  wingsTray: "/food/wings-tray.jpg",
 
   // ── VENUE — original Unsplash kept for atmosphere, real client photos added ──
   crowd:   "https://res.cloudinary.com/dfuibw321/image/upload/v1780511654/cinematic_lounge_scene_with_blurred_peaople_in_the_back_rryjrh.png",
@@ -63,7 +65,7 @@ export const IMG = {
 }
 
 // WhatsApp
-export const WA_NUMBER = "27000000000"
+export const WA_NUMBER = "27611897753"
 export const waLink = (item: string, price: number) =>
   `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Amix Lounge! I'd like to order: ${item} (R${price}). Please confirm availability.`)}`
 
@@ -126,7 +128,7 @@ export const SHOP_ITEMS: ShopItem[] = [
   // ── WINGS & SIDES ──
   { id:"wings-chips", category:"Wings & Sides", badge:"🔥 Hot Pick", name:"Wings & Chips", price:75,
     desc:"Crispy, saucy wings with golden slap chips. The ultimate lounge snack.",
-    img:IMG.wings, tags:["Wings","Chips","Crispy"], featured:true },
+    img:IMG.wingsTray, tags:["Wings","Chips","Crispy"], featured:true },
   { id:"sides-fries-m", category:"Wings & Sides", badge:null, name:"Medium Chips", price:25,
     desc:"Golden, crispy slap chips. Medium portion.",
     img:IMG.fries, tags:["Medium","Crispy"] },
@@ -148,10 +150,10 @@ export const SHOP_ITEMS: ShopItem[] = [
   // ── PLATTERS ──
   { id:"platter-ballers", category:"Platters", badge:"⭐ Fan Favourite", name:"Ballers Platter", price:250,
     desc:"The legendary Ballers Platter. As seen on Tripadvisor reviews. Built to share, built to impress.",
-    img:IMG.wors, tags:["Sharing","Premium","Legendary"], featured:true },
+    img:IMG.platter, tags:["Sharing","Premium","Legendary"], featured:true },
   { id:"platter-wings", category:"Platters", badge:null, name:"Wings Platter", price:120,
     desc:"Crispy, saucy wings. A crowd pleaser for any table.",
-    img:IMG.wings, tags:["Sharing","Chicken"] },
+    img:IMG.wingsTray, tags:["Sharing","Chicken"] },
 ]
 
 export const SHOP_CATEGORIES = ["All","Kota Bar","Grills & Mains","Wings & Sides","Drinks","Platters"]

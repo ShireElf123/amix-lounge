@@ -125,3 +125,21 @@ body::after {
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-track{background:#080202;}
 ::-webkit-scrollbar-thumb{background:#7A0000;border-radius:2px;}
+
+/* ─── Ticker — pure CSS, GPU accelerated, no stutter ─── */
+@keyframes ticker {
+  0%   { transform: translateX(0) translateZ(0); }
+  100% { transform: translateX(-50%) translateZ(0); }
+}
+.animate-ticker {
+  animation: ticker 28s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* ─── Nav scroll performance ─────────────────────────── */
+nav {
+  will-change: background, padding;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}

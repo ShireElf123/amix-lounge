@@ -85,24 +85,18 @@ export const Home = ({ go, setPkg }: HomeProps) => {
           </Reveal>
         </motion.div>
 
-        {/* Scrolling ticker */}
+        {/* Scrolling ticker — pure CSS, no stutter */}
         <div className="absolute bottom-0 left-0 right-0 z-20 border-t overflow-hidden"
           style={{ borderColor: G.border, background: `${G.dark}CC`, backdropFilter: "blur(14px)" }}>
-          <motion.div
-            className="flex gap-12 py-4 px-8"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          >
-            {[...Array(2)].map((_, idx) => (
-              <div key={idx} className="flex gap-12 shrink-0">
-                {["Fri & Sat from 7PM","A-List Artists Weekly","Boss Kota — R65","VIP Bookings Open","Ballers Platter 🔥","Order Online Now","Kempton Park"].map((t, i) => (
-                  <span key={i} className="flex items-center gap-4 text-[8px] uppercase tracking-[0.6em] whitespace-nowrap" style={{ color: G.muted }}>
-                    <span style={{ color: G.gold }}>◆</span> {t}
-                  </span>
-                ))}
-              </div>
-            ))}
-          </motion.div>
+          <div className="flex py-4" style={{ willChange: "transform" }}>
+            <div className="flex gap-12 shrink-0 px-6 animate-ticker">
+              {["Fri & Sat from 7PM","A-List Artists Weekly","Boss Kota — R65","VIP Bookings Open","Ballers Platter 🔥","Order Online Now","Kempton Park","Fri & Sat from 7PM","A-List Artists Weekly","Boss Kota — R65","VIP Bookings Open","Ballers Platter 🔥","Order Online Now","Kempton Park"].map((t, i) => (
+                <span key={i} className="flex items-center gap-4 text-[8px] uppercase tracking-[0.6em] whitespace-nowrap" style={{ color: G.muted }}>
+                  <span style={{ color: G.gold }}>◆</span> {t}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
