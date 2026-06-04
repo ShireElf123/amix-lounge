@@ -78,7 +78,7 @@ export const Restaurant = ({ go }: { go: (page: string) => void }) => (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-28">
         {[IMG.kota, IMG.burger1, IMG.wings, IMG.wors].map((src, i) => (
           <Reveal key={i} delay={i * 0.08}>
-            <div className="aspect-square overflow-hidden border group" style={{ borderColor: G.border }}>
+            <div className="aspect-square overflow-hidden border group" style={{ borderColor: G.border, background: "#1C0A0A" }}>
               {/* Full colour — hover scale only */}
               <Img src={src} alt="Food"
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-[1.08]" />

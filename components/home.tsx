@@ -191,7 +191,7 @@ export const Home = ({ go, setPkg }: HomeProps) => {
                   }}
                   onClick={() => go("shop")}
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                  <div className="relative aspect-[16/10] overflow-hidden" style={{ background: "#1C0A0A" }}>
                     {/* ── FULL COLOUR — no filter/grayscale ── */}
                     <Img
                       src={item.img}

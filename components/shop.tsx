@@ -205,7 +205,7 @@ const FoodCard = ({
       }}
     >
       {/* ── Image ── */}
-      <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+      <div className="relative overflow-hidden" style={{ aspectRatio: "4/3", background: G.surface2 }}>
         <Img
           src={item.img}
           alt={item.name}

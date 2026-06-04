@@ -169,9 +169,9 @@ export interface Package {
 }
 
 export const PACKAGES: Package[] = [
-  { id:"pkg-standard", name:"Social Table", tier:"Standard", price:500, img:IMG.barReal,
+  { id:"pkg-standard", name:"Social Table", tier:"Standard", price:500, img:IMG.lounge,
     perks:["Table for up to 6","Welcome round","Full menu access","Reserved spot"] },
-  { id:"pkg-vip", name:"VIP Booth", tier:"VIP", price:1500, img:IMG.lounge,
+  { id:"pkg-vip", name:"VIP Booth", tier:"VIP", price:1500, img:IMG.vip,
     perks:["Premium booth","Bottle service","Dedicated waiter","Priority entry"] },
   { id:"pkg-ultra", name:"ULTRA Reserve", tier:"Ultra VIP", price:4000, img:IMG.crowd,
     perks:["Front-stage booth","Champagne package","Full night service","Complimentary platter"] },
