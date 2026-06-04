@@ -326,7 +326,7 @@ export const Shop = ({
   const getQty = (id: string) => cart.find(i => i.id === id)?.qty ?? 0
 
   return (
-    <div className="pt-52 pb-36 min-h-screen px-6 md:px-16" style={{ background: G.dark }}>
+    <div className="pt-32 md:pt-52 pb-20 md:pb-36 min-h-screen px-6 md:px-16" style={{ background: G.dark }}>
       <div className="max-w-7xl mx-auto">
 
         <Reveal className="mb-20">
@@ -401,9 +401,13 @@ export const Shop = ({
                 <p className="text-xs font-bold text-white">{cart.reduce((s, i) => s + i.qty, 0)} items</p>
                 <p className="text-[9px]" style={{ color: G.muted }}>R{cart.reduce((s, i) => s + i.price * i.qty, 0)} total</p>
               </div>
-              <span className="text-[8px] uppercase tracking-[0.4em] font-bold" style={{ color: G.gold }}>
+              <button
+                className="text-[8px] uppercase tracking-[0.4em] font-bold transition-opacity hover:opacity-70"
+                style={{ color: G.gold }}
+                onClick={() => {}}
+              >
                 View Cart →
-              </span>
+              </button>
             </motion.div>
           )}
         </AnimatePresence>

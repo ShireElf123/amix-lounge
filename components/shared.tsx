@@ -15,6 +15,8 @@ export const Img = ({ src, alt, className, style }: {
       alt={alt}
       className={className}
       style={style}
+      loading="lazy"
+      decoding="async"
       onError={() => setErr(true)}
     />
   )
@@ -66,7 +68,7 @@ export const Reveal = ({ children, delay = 0, dir = "up", dist = 44, className =
   className?: string
 }) => {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, margin: "-6%" })
+  const inView = useInView(ref, { once: true, margin: "-4%" })
   const d: Record<string, object> = {
     up: { y: dist }, down: { y: -dist }, left: { x: dist }, right: { x: -dist }
   }

@@ -143,3 +143,28 @@ nav {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
+
+/* ─── Reduced motion — respect user OS setting ──────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .animate-ticker { animation: none !important; }
+  .ken-burns      { animation: none !important; }
+  .red-breathe    { animation: none !important; }
+  .glow-gold-pulse{ animation: none !important; }
+}
+
+/* ─── Safe area for iPhone home indicator ───────────────── */
+.pb-safe { padding-bottom: env(safe-area-inset-bottom, 1.5rem); }
+
+/* ─── Smooth scrollbar on all pages ────────────────────── */
+html { scroll-behavior: smooth; }
+
+/* ─── Touch target minimum for mobile ──────────────────── */
+@media (max-width: 768px) {
+  button, a { min-height: 44px; }
+  nav button { min-height: unset; }
+}

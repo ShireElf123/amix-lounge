@@ -10,7 +10,7 @@ export const MenuPage = ({ go }: { go: (page: string) => void }) => {
   const [hover, setHover] = useState<number | null>(null)
 
   return (
-    <div className="pt-52 pb-36 min-h-screen px-6 md:px-16" style={{ background: G.dark }}>
+    <div className="pt-32 md:pt-52 pb-20 md:pb-36 min-h-screen px-6 md:px-16" style={{ background: G.dark }}>
       <div className="max-w-7xl mx-auto">
 
         {/* Header with real kota photo */}

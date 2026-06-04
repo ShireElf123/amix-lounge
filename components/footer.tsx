@@ -20,11 +20,11 @@ export const Footer = ({ go }: { go: (page: string) => void }) => (
             The epitome of service excellence. Affordable food, beverages and entertainment. Classy outlet with top-tier furnishings.
           </p>
           <div className="flex gap-5">
-            <a href="https://instagram.com/amixlounge" target="_blank" rel="noopener noreferrer"
+            <a href="https://instagram.com/amixlounge" target="_blank" rel="noopener noreferrer" aria-label="Follow Amix Lounge on Instagram"
               className="transition-colors duration-300 hover:text-[#C8A951]" style={{ color: G.muted }}>
               <Instagram size={17} />
             </a>
-            <a href="https://facebook.com/AMIXLOUNGE" target="_blank" rel="noopener noreferrer"
+            <a href="https://facebook.com/AMIXLOUNGE" target="_blank" rel="noopener noreferrer" aria-label="Follow Amix Lounge on Facebook"
               className="transition-colors duration-300 hover:text-[#C8A951]" style={{ color: G.muted }}>
               <Facebook size={17} />
             </a>
@@ -50,12 +50,13 @@ export const Footer = ({ go }: { go: (page: string) => void }) => (
           <p className="text-sm font-light" style={{ color: G.muted }}>13 End Street<br />Kempton Park, Gauteng</p>
           <p className="text-xs font-light mt-3" style={{ color: G.muted }}>Fri & Sat: 7PM – Late</p>
           <p className="text-xs font-light" style={{ color: G.muted }}>Google: 4.6 ⭐ (62 reviews)</p>
+          <a href="tel:+27611897753" className="text-xs font-light mt-2 block transition-colors hover:text-white" style={{ color: G.muted }}>+27 61 189 7753</a>
         </div>
       </div>
 
       <div className="pt-6 border-t flex flex-col md:flex-row justify-between items-center gap-4" style={{ borderColor: G.border }}>
-        <p className="text-[7.5px] uppercase tracking-[0.4em]" style={{ color: "#3a2520" }}>© 2026 Amix Lounge. All Rights Reserved.</p>
-        <p className="text-[7.5px] uppercase tracking-[0.4em]" style={{ color: "#3a2520" }}>Best of the Rest — Gauteng&apos;s #1</p>
+        <p className="text-[7.5px] uppercase tracking-[0.4em]" style={{ color: G.muted }}>© 2026 Amix Lounge. All Rights Reserved.</p>
+        <p className="text-[7.5px] uppercase tracking-[0.4em]" style={{ color: G.muted }}>Best of the Rest — Gauteng&apos;s #1</p>
       </div>
     </div>
   </footer>

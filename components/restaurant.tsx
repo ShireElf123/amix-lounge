@@ -5,7 +5,7 @@ import { Btn, Img, Reveal, Divider, Label } from "@/components/shared"
 import { G, IMG } from "@/lib/data"
 
 export const Restaurant = ({ go }: { go: (page: string) => void }) => (
-  <div className="pt-52 pb-36 min-h-screen px-6 md:px-16" style={{ background: G.dark }}>
+  <div className="pt-32 md:pt-52 pb-20 md:pb-36 min-h-screen px-6 md:px-16" style={{ background: G.dark }}>
     <div className="max-w-7xl mx-auto">
       <Reveal>
         <div className="mb-28">

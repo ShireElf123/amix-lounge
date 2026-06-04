@@ -21,7 +21,7 @@ export const Nav = ({ page, go, cartCount = 0, onCartOpen }: NavProps) => {
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 50)
-    window.addEventListener("scroll", fn)
+    window.addEventListener("scroll", fn, { passive: true })
     return () => window.removeEventListener("scroll", fn)
   }, [])
 
@@ -81,9 +81,16 @@ export const Nav = ({ page, go, cartCount = 0, onCartOpen }: NavProps) => {
             <button
               key={l.id}
               onClick={() => handleGo(l.id)}
-              className="relative text-[7.5px] uppercase tracking-[0.55em] font-bold transition-colors duration-300 group"
+              className="relative text-[7.5px] uppercase tracking-[0.55em] font-bold transition-colors duration-300 group flex flex-col items-center gap-1.5 pb-1"
               style={{ color: page === l.id ? G.gold : G.muted }}
             >
+              {/* Active gold dot above link */}
+              <motion.span
+                className="w-1 h-1 rounded-full absolute -top-3"
+                style={{ background: G.gold }}
+                animate={{ opacity: page === l.id ? 1 : 0, scale: page === l.id ? 1 : 0 }}
+                transition={{ duration: 0.25 }}
+              />
               {l.label}
               <motion.span
                 className="absolute -bottom-1 left-0 right-0 h-px"
@@ -102,7 +109,7 @@ export const Nav = ({ page, go, cartCount = 0, onCartOpen }: NavProps) => {
             <motion.button
               whileTap={{ scale: 0.92 }}
               onClick={onCartOpen}
-              className="relative w-10 h-10 border flex items-center justify-center transition-all duration-300"
+              aria-label="Open cart" className="relative w-10 h-10 border flex items-center justify-center transition-all duration-300"
               style={{ borderColor: G.border }}
               whileHover={{ borderColor: G.gold }}
             >
@@ -160,7 +167,7 @@ export const Nav = ({ page, go, cartCount = 0, onCartOpen }: NavProps) => {
             </div>
 
             {/* Links — all visible, no scroll */}
-            <div className="flex flex-col items-center gap-5 w-full px-10">
+            <div className="flex flex-col items-center gap-4 w-full px-10 overflow-y-auto max-h-[80vh]">
               {links.map((l, i) => (
                 <motion.button
                   key={l.id}

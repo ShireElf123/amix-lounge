@@ -25,12 +25,14 @@ export const Home = ({ go, setPkg }: HomeProps) => {
       {/* ═══ HERO ═══ */}
       <section className="relative h-screen flex items-end overflow-hidden">
         {/* BG image — real client hero, full colour */}
-        <motion.div style={{ y: yBg }} className="absolute inset-0 z-0">
-          <Img
+        <motion.div style={{ y: yBg, willChange: "transform" }} className="absolute inset-0 z-0">
+          <img
             src={IMG.hero}
             alt="Amix Lounge"
             className="w-full h-full object-cover scale-[1.06]"
-            style={{ opacity: 0.72 }}
+            style={{ opacity: 0.72, willChange: "transform" }}
+            fetchPriority="high"
+            loading="eager"
           />
           {/* Gradient overlays for text legibility */}
           <div className="absolute inset-0"
@@ -46,7 +48,7 @@ export const Home = ({ go, setPkg }: HomeProps) => {
         <div className="absolute inset-0 z-[1] pointer-events-none opacity-[0.022]"
           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }} />
 
-        <motion.div style={{ y: yText, opacity: fade }} className="relative z-10 max-w-7xl mx-auto w-full px-8 md:px-16 pb-28">
+        <motion.div style={{ y: yText, opacity: fade, willChange: "transform, opacity" }} className="relative z-10 max-w-7xl mx-auto w-full px-8 md:px-16 pb-28">
           <Reveal dir="down" delay={0.05}>
             <div className="flex items-center gap-4 mb-10">
               <motion.div
@@ -101,7 +103,7 @@ export const Home = ({ go, setPkg }: HomeProps) => {
       </section>
 
       {/* ═══ 4 PILLARS ═══ */}
-      <section className="py-32 px-8 md:px-16" style={{ background: G.surface0 }}>
+      <section className="py-20 md:py-32 px-6 md:px-16" style={{ background: G.surface0 }}>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-20">
             <Reveal dir="left">
@@ -154,7 +156,7 @@ export const Home = ({ go, setPkg }: HomeProps) => {
       </section>
 
       {/* ═══ FOOD TEASER — real kota image, full colour ═══ */}
-      <section className="py-32 px-8 md:px-16">
+      <section className="py-20 md:py-32 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16">
             <Reveal dir="left">
@@ -244,7 +246,7 @@ export const Home = ({ go, setPkg }: HomeProps) => {
       </section>
 
       {/* ═══ INFO ROW ═══ */}
-      <section className="px-8 md:px-16 pb-28">
+      <section className="px-6 md:px-16 pb-20 md:pb-28">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 border" style={{ borderColor: G.border }}>
           {[
             { icon: <Clock size={20} />,  label:"Hours",       lines:["Fri & Sat — 7PM to Late","Events by arrangement"] },
