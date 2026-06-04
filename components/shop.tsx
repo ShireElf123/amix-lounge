@@ -375,9 +375,88 @@ export const Shop = ({
         </Reveal>
 
         {/* Product grid */}
-        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          <AnimatePresence mode="popLayout">
-            {filtered.map((item, i) => (
+        <AnimatePresence mode="popLayout">
+          {/* ── Kota Bar — one hero image + menu-board list ── */}
+          {(cat === "All" || cat === "Kota Bar") && (() => {
+            const kotas = SHOP_ITEMS.filter(i => i.category === "Kota Bar")
+            return (
+              <motion.div layout key="kota-section" className="mb-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border" style={{ borderColor: G.border }}>
+                  {/* Single hero kota image */}
+                  <div className="relative overflow-hidden" style={{ minHeight: 320, background: "#1C0A0A" }}>
+                    <img
+                      src={kotas[0].img}
+                      alt="Kota Bar"
+                      className="w-full h-full object-cover"
+                      style={{ position: "absolute", inset: 0 }}
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0" style={{ background: "linear-gradient(to right, transparent 40%, #0E040499)" }} />
+                    <div className="absolute bottom-6 left-6">
+                      <span className="text-[7px] uppercase tracking-[0.7em] font-bold px-3 py-1"
+                        style={{ background: G.gold, color: "#000" }}>Kota Bar</span>
+                    </div>
+                  </div>
+                  {/* Menu board — names + prices, no duplicate images */}
+                  <div className="flex flex-col divide-y" style={{ borderColor: G.border }}>
+                    {kotas.map((item) => (
+                      <div key={item.id}
+                        className="flex items-center justify-between px-6 py-4 group transition-colors duration-200 cursor-pointer"
+                        style={{ background: "transparent" }}
+                        onMouseEnter={e => (e.currentTarget.style.background = G.surface2)}
+                        onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
+                      >
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <p className="text-white text-sm font-semibold">{item.name}</p>
+                            {item.badge && (
+                              <span className="text-[6.5px] uppercase tracking-[0.3em] px-1.5 py-0.5 font-bold"
+                                style={{ background: item.featured ? G.gold : G.crimson, color: item.featured ? "#000" : "#fff" }}>
+                                {item.badge}
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-[10px] font-light leading-relaxed" style={{ color: G.muted }}>
+                            {item.tags.join(" · ")}
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-3 ml-4 shrink-0">
+                          <span className="font-serif text-lg font-bold" style={{ color: G.goldLight }}>R{item.price}</span>
+                          <motion.button
+                            onClick={() => addToCart(item)}
+                            whileTap={{ scale: 0.92 }}
+                            className="w-8 h-8 border flex items-center justify-center transition-all duration-200"
+                            style={{
+                              borderColor: justAdded === item.id ? G.gold : G.border,
+                              background: justAdded === item.id ? G.gold : "transparent",
+                            }}
+                          >
+                            {justAdded === item.id
+                              ? <Check size={11} style={{ color: "#000" }} />
+                              : <Plus size={11} style={{ color: G.gold }} />
+                            }
+                          </motion.button>
+                          <motion.a
+                            href={waLink(item.name, item.price)}
+                            target="_blank" rel="noopener noreferrer"
+                            whileTap={{ scale: 0.92 }}
+                            className="w-8 h-8 border flex items-center justify-center"
+                            style={{ borderColor: "#25D36630" }}
+                          >
+                            <MessageCircle size={11} style={{ color: "#25D366" }} />
+                          </motion.a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            )
+          })()}
+
+          {/* ── All other categories — card grid ── */}
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            {filtered.filter(i => i.category !== "Kota Bar").map((item, i) => (
               <FoodCard
                 key={item.id}
                 item={item}
@@ -389,8 +468,8 @@ export const Shop = ({
                 onAddToCart={() => addToCart(item)}
               />
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Sticky cart summary */}
         <AnimatePresence>
