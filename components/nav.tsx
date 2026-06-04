@@ -146,7 +146,7 @@ export const Nav = ({ page, go, cartCount = 0, onCartOpen }: NavProps) => {
             animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }}
             exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
             transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-[300] flex flex-col justify-center items-center"
+            className="fixed inset-0 z-[300] flex flex-col justify-center items-center overflow-y-auto py-20"
             style={{ background: G.dark }}
           >
             {/* Close */}
@@ -167,15 +167,15 @@ export const Nav = ({ page, go, cartCount = 0, onCartOpen }: NavProps) => {
             </div>
 
             {/* Links — all visible, no scroll */}
-            <div className="flex flex-col items-center gap-4 w-full px-10 overflow-y-auto max-h-[80vh]">
+            <div className="flex flex-col items-center gap-3 w-full px-8">
               {links.map((l, i) => (
                 <motion.button
                   key={l.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.05 + 0.1 }}
+                  transition={{ delay: i * 0.04 + 0.08 }}
                   onClick={() => handleGo(l.id)}
-                  className="w-full text-center py-3 font-serif text-3xl tracking-tighter transition-all border-b"
+                  className="w-full text-center py-2.5 font-serif text-2xl tracking-tighter transition-all border-b"
                   style={{
                     color: page === l.id ? G.gold : G.text,
                     fontStyle: page === l.id ? "italic" : "normal",

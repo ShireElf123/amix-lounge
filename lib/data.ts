@@ -117,7 +117,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     img:IMG.burger2, tags:["Beef","Chips","Classic"] },
   { id:"wors-rib", category:"Grills & Mains", badge:"🔥 Kasi Favourite", name:"Wors, Short Rib & Pap", price:120,
     desc:"Traditional boerewors and short rib, slow-cooked to perfection, served with stiff pap.",
-    img:IMG.wors, tags:["Boerewors","Short Rib","Pap","Traditional"], featured:true },
+    img:IMG.platter, tags:["Boerewors","Short Rib","Pap","Traditional"], featured:true },
   { id:"full-chicken-1", category:"Grills & Mains", badge:"Best Value", name:"Full Chicken & Chips", price:110,
     desc:"A whole rotisserie chicken, perfectly seasoned, with a mountain of chips on the side.",
     img:IMG.chicken1, tags:["Full Chicken","Chips","Rotisserie"] },

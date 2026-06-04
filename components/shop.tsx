@@ -347,18 +347,22 @@ export const Shop = ({
             </span>
           </div>
           {/* Delivery platforms */}
-          <div className="flex items-center gap-4 mt-5">
-            <span className="text-[7.5px] uppercase tracking-[0.5em] font-bold" style={{ color: G.muted }}>Also on</span>
-            <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer"
-              className="flex items-center justify-center px-3 py-2 border transition-all duration-300 hover:border-[#06C167]"
-              style={{ borderColor: G.border, background: "#000" }}>
-              <img src="/logos/ubereats.png" alt="Uber Eats" style={{ height: 22, width: "auto" }} />
-            </a>
-            <a href="https://www.mrdfood.com" target="_blank" rel="noopener noreferrer"
-              className="flex items-center justify-center px-3 py-2 border transition-all duration-300 hover:border-[#E31837]"
-              style={{ borderColor: G.border, background: "#fff", borderRadius: 4 }}>
-              <img src="/logos/mrd.png" alt="Mr D" style={{ height: 22, width: "auto" }} />
-            </a>
+          <div className="mt-8 border p-6 max-w-sm" style={{ borderColor: G.border, background: G.surface1 }}>
+            <p className="text-[8px] uppercase tracking-[0.6em] font-bold mb-5" style={{ color: G.muted }}>
+              Also Available On
+            </p>
+            <div className="flex items-center gap-4">
+              <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer"
+                className="flex items-center justify-center px-5 py-3 border flex-1 transition-all duration-300 hover:border-[#06C167]"
+                style={{ borderColor: `${G.gold}30`, background: "#000" }}>
+                <img src="/logos/ubereats.png" alt="Uber Eats" style={{ height: 28, width: "auto" }} />
+              </a>
+              <a href="https://www.mrdfood.com" target="_blank" rel="noopener noreferrer"
+                className="flex items-center justify-center px-5 py-3 border flex-1 transition-all duration-300 hover:border-[#E31837]"
+                style={{ borderColor: `${G.gold}30`, background: "#fff", borderRadius: 4 }}>
+                <img src="/logos/mrd.png" alt="Mr D" style={{ height: 28, width: "auto" }} />
+              </a>
+            </div>
           </div>
           <Divider className="mt-10 max-w-sm opacity-40" />
         </Reveal>
